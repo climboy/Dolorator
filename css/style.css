@@ -16,9 +16,17 @@ body{
 a
 {
   color: #000000;
+  font-size: 20px;
+  font-family: "Rockwell";
 }
 img
 {
   width: 64px;
   height: 64px;
+}
+p
+{
+  font-size: 20px;
+  font-family: "Rockwell";
+  color: #000000;
 }
