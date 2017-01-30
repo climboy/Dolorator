@@ -5,11 +5,7 @@ h1
   font-size: 45px;
   font-family: "Stencil";
 }
-.container
-{
-  text-align: center;
-  border: none;
-}
+
 body{
   background-color: rgba(232,224,165,0.3);
 }
