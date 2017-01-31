@@ -9,7 +9,7 @@ h1
 {
   margin : 0 auto;
   width : 50%;
-
+  padding-top: 15px;
   border: none;
 
 }
@@ -24,12 +24,22 @@ a
 }
 img
 {
+  margin-bottom: 25px;
+  margin-right: 1%;
+  
+  
   width: 64px;
   height: 64px;
 }
-p
+
+.soul
 {
-  font-size: 20px;
-  font-family: "Rockwell";
-  color: #000000;
+    text-decoration:  none;
+    font-family: "Rockwell";
+    color : blue;
+    font-size: 20px;
+}
+.files
+{
+  
 }
