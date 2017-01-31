@@ -9,7 +9,7 @@
     <h1>Liste des Dossiers</h1>
     <div class="container">
       <?php
-      $chemin="c:/wamp64/www/";/* variable donnant le chemin du dossier  de base ou l'on se trouve*/
+      $chemin="c:/xampp/htdocs/";/* variable donnant le chemin du dossier  de base ou l'on se trouve*/
       if(isset($_REQUEST["variable"])){/* condition permettant de vérifier si la variable "variable" existe.*/
           $path=$_REQUEST["variable"];
       }
@@ -21,6 +21,7 @@
       if (is_file($chemin)) {
     OpenFile($chemin);
       }
+<<<<<<< HEAD
       else {
         $return=scandir($chemin);/* variable qui permet de scanner le dossier*/
         function decoupe($str){
@@ -56,6 +57,29 @@
                 echo "$list <a href=?variable='$list'></a>";/* affiche la liste des éléments*/
             }
         }
+=======
+       
+      
+      /* lister les dossiers*/
+      foreach($return as $list){ /* boucle foreach cherche 1 par 1 les éléments de la variable return pour pouvoir les utiliser sous le nom de list*/
+if ($list == '.') {
+  echo "";
+}
+          else if ($list == '..') {
+              $tmp = decoupe($path);
+            
+
+             echo "<a href='?variable=".$tmp."'><img src='./css/return.png'>$list</a>";
+          }
+          else if (is_dir($chemin."/".$list)) {
+
+              echo "<a href=?variable=".$path."/".$list."><img src='./css/dossier.png'>$list</a>";/* affiche la liste des éléments*/
+          }
+          else{
+              echo "<img src='./css/fichier.png'><br>";
+              echo "$list";/* affiche la liste des éléments*/
+          }
+>>>>>>> origin/master
       }
 
       function OpenFile($list=''){
