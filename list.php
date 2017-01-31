@@ -18,38 +18,57 @@
       }
       $chemin=$chemin.$path;
       echo ($path);
-      $return=scandir($chemin);/* variable qui permet de scanner le dossier*/
-      function decoupe($str){
-          $i=0;
-          $tmp=0;
-          while ($i <strlen($str)){
-          if ($str[$i]=='/')
-              $tmp=$i;
-              $i++;
-          }
-          $retour = substr($str, 0, $tmp);
-          return $retour;
+      if (is_file($chemin)) {
+    OpenFile($chemin);
       }
-      /* lister les dossiers*/
-      foreach($return as $list){ /* boucle foreach cherche 1 par 1 les éléments de la variable return pour pouvoir les utiliser sous le nom de list*/
-if ($list == '.') {
-  echo "";
+      else {
+        $return=scandir($chemin);/* variable qui permet de scanner le dossier*/
+        function decoupe($str){
+            $i=0;
+            $tmp=0;
+            while ($i <strlen($str)){
+            if ($str[$i]=='/')
+                $tmp=$i;
+                $i++;
+            }
+            $retour = substr($str, 0, $tmp);
+            return $retour;
+        }
+
+
+        /* lister les dossiers*/
+        foreach($return as $list){ /* boucle foreach cherche 1 par 1 les éléments de la variable return pour pouvoir les utiliser sous le nom de list*/
+  if ($list == '.') {
+    echo "";
+  }
+            else if ($list == '..') {
+                $tmp = decoupe($path);
+
+
+               echo "<a href='?variable=".$tmp."'><img src='./css/return.png'>$list</a>";
+            }
+            else if (is_dir($chemin."/".$list)) {
+
+                echo "<a href=?variable=".$path."/".$list."><img src='./css/dossier.png'>$list</a>";/* affiche la liste des éléments*/
+            }
+            else{
+                echo "<a href=\"?variable=".$path."/".$list."\"><img src='./css/fichier.png'></a><br>";
+                echo "$list <a href=?variable='$list'></a>";/* affiche la liste des éléments*/
+            }
+        }
+      }
+
+      function OpenFile($list=''){
+      $descFic = fopen ($list, "r");
+      while ($ligne = fread ($descFic, filesize($list)))
+{
+  print $ligne."";
 }
-          else if ($list == '..') {
-              $tmp = decoupe($path);
+      fclose ($descFic);
+    }
 
-              echo "<a href='?variable=".$tmp."'>$list<img src='./css/return.png'></a><br>";
-          }
-          else if (is_dir($chemin."/".$list)) {
-
-              echo "<a href=?variable=".$path."/".$list.">$list<img src='./css/dossier.png'><br></a></br>";/* affiche la liste des éléments*/
-          }
-          else{
-              echo "<img src='./css/fichier.png'><br>";
-              echo "<p>$list</p></br>";/* affiche la liste des éléments*/
-          }
-      }
       ?>
+      </div>
 
     </div>
   </body>
