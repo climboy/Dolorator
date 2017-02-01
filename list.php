@@ -10,17 +10,20 @@
     <h1>Dolorator</h1>
     <div class="container">
       <?php
-      $chemin="c:/xampp/htdocs/";/* variable donnant le chemin du dossier  de base ou l'on se trouve*/
+      
       if(isset($_REQUEST["variable"])){/* condition permettant de vérifier si la variable "variable" existe.*/
-          $path=$_REQUEST["variable"];
+         $chemin="c:/xampp/htdocs/".$_REQUEST['variable'];
+         $path=$_REQUEST["variable"];
+        
       }
       else{
+        $chemin="c:/xampp/htdocs/";/* variable donnant le chemin du dossier  de base ou l'on se trouve*/
+          
           $path="";
       }
-      $chemin=$chemin.$path;
-      echo ($path);
+      
       if (is_file($chemin)) {
-    OpenFile($chemin);
+      OpenFile($chemin,$path);
       }
       else {
         $return=scandir($chemin);/* variable qui permet de scanner le dossier*/
@@ -35,7 +38,9 @@
             $retour = substr($str, 0, $tmp);
             return $retour;
         }
-
+?>
+        <img class="explo"src="./css/explorateur.png">
+        <?php
 
        /* lister les dossiers*/
         foreach($return as $list){ /* boucle foreach cherche 1 par 1 les éléments de la variable return pour pouvoir les utiliser sous le nom de list*/
@@ -44,9 +49,7 @@
   }
             else if ($list == '..') {
                 $tmp = decoupe($path);
-
-
-              
+             
             }
             else if (is_dir($chemin."/".$list)) {
 
@@ -58,20 +61,34 @@
         }
       }
 
-     function OpenFile($list=''){
-      
-      $descFic = fopen ($list, "r");
-      while ($ligne = fread($descFic, filesize($list)))
-{
-  print $ligne."";
-}
-      fclose ($descFic);
+     function OpenFile($chemin,$path){ 
+
+     $doc = verifFile($path);
+      if($doc[1] == "png" || $doc[1] == "ico"  || $doc[1] == "jpg")
+    {
+      echo "<img src='$path'>";
     }
+    else
+    {
+      
+      echo htmlentities(highlight_string(file_get_contents($chemin)));
+    }        
+
+ }   
+    function verifFile($doc)
+  {
+    $tableau = [];
+    $tableau[0] = strripos($doc, ".");
+    $tableau[1] = substr($doc, $tableau[0] + 1);
+    return $tableau;
+  }
 
      ?>
       </div>
 
    </div>
-    <a id="return" class="col-md-6 col-md-offset-3" href="list.php"><img src="./css/return.png" alt="">Return</a>
+   
+    <a id="return" class="col-md-6 col-md-offset-3" href="?path=$parent"><img src="./css/return.png" alt="">Return</a>
+ 
   </body>
 </html>

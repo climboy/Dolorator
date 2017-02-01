@@ -1,16 +1,51 @@
+.dol
+{
+  text-align: center;
+  margin-left: 11%;
+  font-size: 100px;
+
+}
+.book
+{
+  text-align: center;
+width: 200px;
+height: 200px;
+margin-left: 19.5%;
+}
+.logo
+{
+  margin : 0 auto;
+  width : 50%;
+  border: none;
+  margin-top: -10%;
+  margin-right: 27%;
+}
+.explor
+{
+  width: 150px;
+  height: 225px;
+  margin-left: 95%;
+  margin-top: -15%;
+}
+
 h1
 {
   text-align: center;
   margin-top: 7%;
-  font-size: 45px;
+  font-size: 50px;
+  margin-right: 14%;
+  padding-bottom: 14%;
   font-family: "Stencil";
 }
 .container
 {
   margin : 0 auto;
   width : 50%;
+
   padding-top: 15px;
+
   border: none;
+  margin-top: -12%;
 
 }
 body{
@@ -18,7 +53,7 @@ body{
 }
 a
 {
-  color: #000000;
+  color: blue;
   font-size: 20px;
   font-family: "Rockwell";
 }
@@ -26,18 +61,37 @@ img
 {
   margin-bottom: 25px;
   margin-right: 1%;
-  
-  
+
   width: 64px;
   height: 64px;
+
 }
 
 .soul
 {
     text-decoration:  none;
     font-family: "Rockwell";
+
+    color : #8B0000;
+    font-size: 15px;
+}
+#return
+{
+  color : #000000;
+}
+.explo
+{
+  width: 80px;
+  height: 130px;
+  margin-left: 65%;
+  margin-top: -19%;
+
+
+
+
     color : blue;
     font-size: 20px;
+
 }
 .files
 {

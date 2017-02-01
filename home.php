@@ -6,9 +6,11 @@
     <title>Dolorator</title>
   </head>
   <body>
-    <h1>Dolorator</h1>
-    <div class="container">
-<a href="list.php">Librairy</a>
+    <h1 class="dol">Dolorator</h1>
+    <div class="logo">
+<img class="explor"src="./css/explorateur.png">
+<a class="book"href="list.php"><img class="book"src="./css/book.png"></a>
 </div>
+
   </body>
 </html>
