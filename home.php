@@ -8,7 +8,7 @@
   <body>
     <h1 class="dol">Dolorator</h1>
     <div class="logo">
-<img class="explor"src="./css/explorateur.png">
+<img class="explor"src="./css/explore.png">
 <a class="book"href="list.php"><img class="book"src="./css/book.png"></a>
 </div>
 

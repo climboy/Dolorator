@@ -7,7 +7,9 @@
     <title>Dolorator</title>
   </head>
   <body>
+    <a href="home.php"><img class="home" src="./css/house.png"></a>
     <h1>Dolorator</h1>
+    
     <div class="container">
       <?php
       
@@ -39,7 +41,7 @@
             return $retour;
         }
 ?>
-        <img class="explo"src="./css/explorateur.png">
+        <img class="explo"src="./css/explore.png">
         <?php
 
        /* lister les dossiers*/
@@ -86,9 +88,9 @@
      ?>
       </div>
 
-   </div>
    
-    <a id="return" class="col-md-6 col-md-offset-3" href="?path=$parent"><img src="./css/return.png" alt="">Return</a>
+   
+    <a id="return" class="col-md-6 col-md-offset-3" href="?path=$parent"><img src="./css/return.png" alt=""></a>
  
   </body>
 </html>

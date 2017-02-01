@@ -1,7 +1,7 @@
 .dol
 {
   text-align: center;
-  margin-left: 11%;
+  margin-left: 7.5%;
   font-size: 100px;
 
 }
@@ -17,32 +17,32 @@ margin-left: 19.5%;
   margin : 0 auto;
   width : 50%;
   border: none;
-  margin-top: -10%;
+  margin-top: -8%;
   margin-right: 27%;
 }
 .explor
 {
   width: 150px;
-  height: 225px;
-  margin-left: 95%;
-  margin-top: -15%;
+  height: 150px;
+  margin-left: 85%;
+  margin-top: -17%;
 }
 
 h1
 {
   text-align: center;
   margin-top: 7%;
-  font-size: 50px;
-  margin-right: 14%;
-  padding-bottom: 14%;
-  font-family: "Stencil";
+  font-size: 75px;
+  margin-right: 11%;
+  padding-bottom: 12%;
+  font-family: "Britannic";
 }
 .container
 {
   margin : 0 auto;
   width : 50%;
 
-  padding-top: 15px;
+  
 
   border: none;
   margin-top: -12%;
@@ -70,7 +70,7 @@ img
 .soul
 {
     text-decoration:  none;
-    font-family: "Rockwell";
+    font-family: "Britannic";
 
     color : #8B0000;
     font-size: 15px;
@@ -81,19 +81,15 @@ img
 }
 .explo
 {
-  width: 80px;
-  height: 130px;
-  margin-left: 65%;
-  margin-top: -19%;
-
-
-
-
-    color : blue;
-    font-size: 20px;
-
+  width: 100px;
+  height: 100px;
+  margin-left: 67%;
+  margin-top: -12%;
 }
-.files
+.home
 {
-  
+  width: 90px;
+  height: 90px;
+  margin-bottom:-18%;
+  margin-left: 26.5%; 
 }
