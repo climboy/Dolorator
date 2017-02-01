@@ -8,7 +8,10 @@
   </head>
   <body>
     <h1>Dolorator</h1>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
     <div class="container">
       <?php
       $chemin="c:/wamp64/www/";/* variable donnant le chemin du dossier  de base ou l'on se trouve*/
@@ -36,9 +39,14 @@
             $retour = substr($str, 0, $tmp);
             return $retour;
         }
+<<<<<<< HEAD
         ?>
         <img class="explo"src="./css/explorateur.png">
         <?php
+=======
+
+
+>>>>>>> origin/master
        /* lister les dossiers*/
         foreach($return as $list){ /* boucle foreach cherche 1 par 1 les éléments de la variable return pour pouvoir les utiliser sous le nom de list*/
   if ($list == '.') {
@@ -47,8 +55,16 @@
             else if ($list == '..') {
                 $tmp = decoupe($path);
 
+<<<<<<< HEAD
             }
             else if (is_dir($chemin."/".$list)) {
+=======
+
+              
+            }
+            else if (is_dir($chemin."/".$list)) {
+
+>>>>>>> origin/master
                echo "<div class='col-md-4'><a class='soul' href=?variable=".$path."/".$list."> <img src='./css/dossier.png'>$list</a> </div>";/* affiche la liste des éléments*/
             }
             else{
@@ -58,6 +74,11 @@
       }
      function OpenFile($list=''){
 
+<<<<<<< HEAD
+=======
+     function OpenFile($list=''){
+      
+>>>>>>> origin/master
       $descFic = fopen ($list, "r");
       while ($ligne = fread($descFic, filesize($list)))
 {
@@ -65,6 +86,10 @@
 }
       fclose ($descFic);
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
      ?>
       </div>
 

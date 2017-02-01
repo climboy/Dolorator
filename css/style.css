@@ -41,6 +41,10 @@ h1
 {
   margin : 0 auto;
   width : 50%;
+<<<<<<< HEAD
+=======
+  padding-top: 15px;
+>>>>>>> origin/master
   border: none;
   margin-top: -12%;
 
@@ -58,8 +62,13 @@ img
 {
   margin-bottom: 25px;
   margin-right: 1%;
+<<<<<<< HEAD
 
 
+=======
+  
+  
+>>>>>>> origin/master
   width: 64px;
   height: 64px;
 
@@ -69,6 +78,7 @@ img
 {
     text-decoration:  none;
     font-family: "Rockwell";
+<<<<<<< HEAD
     color : #8B0000;
     font-size: 15px;
 }
@@ -85,4 +95,12 @@ img
 
 
 
+=======
+    color : blue;
+    font-size: 20px;
+>>>>>>> origin/master
+}
+.files
+{
+  
 }
